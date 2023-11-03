@@ -1,6 +1,11 @@
-# github-tools-chrome-extension
+# GitHub Tools Chrome Extension
 
-This Chrome extension adds a side panel with some useful tools for GitHub.
+This Chrome extension adds a side panel with some useful tools for GitHub:
+
+- Diff views
+  - Hide and show deletions
+  - Hide and show additions
+  - Hide and show comments
 
 ## Running it
 
