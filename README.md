@@ -3,6 +3,7 @@
 This Chrome extension adds a side panel with some useful tools for GitHub:
 
 - Diff views
+  - Collapse and expand all files
   - Hide and show deletions
   - Hide and show additions
   - Hide and show comments
