@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="githubtools-sidepanel.css">
     <title>GitHub Tools</title>
   </head>
   <body>
     <h1>GitHub Tools</h1>
-    <h2>Diff view</h2>
-    <p>Files: <button id="collapseFiles">Collapse</button> <button id="expandFiles">Expand</button></p>
-    <p>Deletions: <button id="hideDeletions">Hide</button> <button id="showDeletions">Show</button></p>
-    <p>Additions: <button id="hideAdditions">Hide</button> <button id="showAdditions">Show</button></p>
-    <p>Comments: <button id="hideComments">Hide</button> <button id="showComments">Show</button></p>
+    <table>
+      <tbody>
+        <tr><td colspan="3"><h2>General</h2></td></tr>
+        <tr><td>Stupid tooltips:<br><span style="font-size: xx-small;">(default hidden)</span></td><td colspan="2"><button id="showStupidTooltips">&#x1F441;Show</button></td><td colspan="2"><button id="hideStupidTooltips">&#x1F5D9;Hide</button></td></tr>
+        <tr><td colspan="3"><h2>Diff view</h2></td></tr>
+        <tr><td>All files:</td><td colspan="2"><button id="expandFiles">&#x1F441;Expand</button></td><td colspan="2"><button id="collapseFiles">&#x1F5D9;Collapse</button></td></tr>
+        <tr><td>Show:</td><td><button id="showAdditionsOnly">Additions</button></td><td colspan="2"><button id="showAdditionsAndDeletions">Both</button></td><td><button id="showDeletionsOnly">Deletions</button></td></tr>
+        <tr><td>Comments:</td><td colspan="2"><button id="showComments">&#x1F441;Show</button></td><td colspan="2"><button id="hideComments">&#x1F5D9;Hide</button></td></tr>
+      </tbody>
+    </table>
   </body>
   <script src="githubtools-sidepanel.js"></script>
 </html>
