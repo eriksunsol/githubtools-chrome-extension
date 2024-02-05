@@ -18,10 +18,10 @@ chrome.runtime.onMessage.addListener(
         flagShowStupidToolTips = true;
       },
       collapseFiles: function () {
-        document.querySelectorAll('div.file-header').forEach(elt => { if (elt.nextElementSibling.checkVisibility()) elt.childNodes[1].childNodes[1].click(); });
+        document.querySelectorAll('div.file-header').forEach(elt => { if (elt.parentElement.querySelector("div.js-file-content").checkVisibility()) elt.childNodes[1].childNodes[1].click(); });
       },
       expandFiles: function () {
-        document.querySelectorAll('div.file-header').forEach(elt => { if (!elt.nextElementSibling.checkVisibility()) elt.childNodes[1].childNodes[1].click(); });
+        document.querySelectorAll('div.file-header').forEach(elt => { if (!elt.parentElement.querySelector("div.js-file-content").checkVisibility()) elt.childNodes[1].childNodes[1].click(); });
       },
       showAdditionsOnly: function () {
         this.showAdditions();
