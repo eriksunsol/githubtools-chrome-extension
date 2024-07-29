@@ -1,3 +1,24 @@
+/* Default (Light Mode) Styles */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    color-scheme: light dark;
+    /* Indicate support for both light and dark modes */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #000000;
+        --text-color: #ffffff;
+    }
+}
+
 table,td {
     border: none;
 }
