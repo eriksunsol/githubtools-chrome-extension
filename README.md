@@ -3,12 +3,15 @@
 This Chrome extension adds a side panel with some useful tools for GitHub:
 
 - General
-  - Hide and show "stupid" tooltips
+  - Hide and show "stupid" tooltips (default: **hide**)  
     _(Some UI elements on GitHub pop up tooltips that annoyingly get in the way of other UI elements nearby.)_
 - Diff views
   - Collapse and expand all files
   - Show only additions, only deletions, or both
   - Hide and show comments
+- Mermaid views
+  - Hide and show size/pan boxes in Mermaid views (default: **hide**)  
+    _(Quite often they get in the way of diagrams...)_
 
 ## Running it
 
