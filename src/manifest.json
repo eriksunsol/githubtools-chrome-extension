@@ -21,13 +21,22 @@
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/*",
-        "https://viewscreen.githubusercontent.com/markdown/mermaid?*"
+        "https://github.com/*"
       ],
       "all_frames": true,
       "world": "ISOLATED",
       "js": [
         "githubtools-contentscript.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://viewscreen.githubusercontent.com/markdown/mermaid?*"
+      ],
+      "all_frames": true,
+      "world": "ISOLATED",
+      "js": [
+        "githubtools-mermaid-iframe-contentscript.js"
       ]
     }
   ],

@@ -53,14 +53,10 @@ chrome.runtime.onMessage.addListener(
       showComments: function () {
         document.querySelectorAll('td.line-comments').forEach((n) => n.parentElement.style.display = 'table-row');
       },
-      hideSizePanBoxes: function () {
-        document.querySelectorAll('div.mermaid-viewer-control-panel').forEach((n) => n.style.display = 'none');
-      },
-      showSizePanBoxes: function () {
-        document.querySelectorAll('div.mermaid-viewer-control-panel').forEach((n) => n.style.display = 'grid');
-      },
     };
-    actions[request.action]();
+    if (request.action in actions) {
+      actions[request.action]();
+    }
   }
 );
 
