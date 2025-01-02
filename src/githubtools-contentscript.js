@@ -36,22 +36,28 @@ chrome.runtime.onMessage.addListener(
         this.showDeletions();
       },
       hideDeletions: function () {
-        document.querySelectorAll('td.blob-num-deletion').forEach((n) => n.parentElement.style.display = 'none')
+        document.querySelectorAll('td.blob-num-deletion').forEach((n) => n.parentElement.style.display = 'none');
       },
       showDeletions: function () {
-        document.querySelectorAll('td.blob-num-deletion').forEach((n) => n.parentElement.style.display = 'table-row')
+        document.querySelectorAll('td.blob-num-deletion').forEach((n) => n.parentElement.style.display = 'table-row');
       },
       hideAdditions: function () {
-        document.querySelectorAll('td.blob-num-addition').forEach((n) => n.parentElement.style.display = 'none')
+        document.querySelectorAll('td.blob-num-addition').forEach((n) => n.parentElement.style.display = 'none');
       },
       showAdditions: function () {
-        document.querySelectorAll('td.blob-num-addition').forEach((n) => n.parentElement.style.display = 'table-row')
+        document.querySelectorAll('td.blob-num-addition').forEach((n) => n.parentElement.style.display = 'table-row');
       },
       hideComments: function () {
-        document.querySelectorAll('td.line-comments').forEach((n) => n.parentElement.style.display = 'none')
+        document.querySelectorAll('td.line-comments').forEach((n) => n.parentElement.style.display = 'none');
       },
       showComments: function () {
-        document.querySelectorAll('td.line-comments').forEach((n) => n.parentElement.style.display = 'table-row')
+        document.querySelectorAll('td.line-comments').forEach((n) => n.parentElement.style.display = 'table-row');
+      },
+      hideSizePanBoxes: function () {
+        document.querySelectorAll('div.mermaid-viewer-control-panel').forEach((n) => n.style.display = 'none');
+      },
+      showSizePanBoxes: function () {
+        document.querySelectorAll('div.mermaid-viewer-control-panel').forEach((n) => n.style.display = 'grid');
       },
     };
     actions[request.action]();
